@@ -71,12 +71,14 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     private void checkAnswer(boolean userAnswer) {
+
+        int messageId;
         if (userAnswer == mQuestionBank[mCurrentIndex].isAnswer()) {
-            Toast.makeText(QuizActivity.this, "Correct", Toast.LENGTH_SHORT).show();
+            messageId = R.string.correct_toast;
         }
         else {
-            Toast.makeText(QuizActivity.this, "Incorrect", Toast.LENGTH_SHORT).show();
+            messageId = R.string.incorrect_toast;
         }
+        Toast.makeText(QuizActivity.this, messageId, Toast.LENGTH_SHORT).show();
     }
-
 }
