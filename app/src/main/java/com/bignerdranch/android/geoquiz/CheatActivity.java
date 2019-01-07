@@ -1,5 +1,6 @@
 package com.bignerdranch.android.geoquiz;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -44,7 +45,7 @@ public class CheatActivity extends AppCompatActivity {
     }
 
     public void show_answer() {
-        Toast.makeText(CheatActivity.this, "It is bad to cheat", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(CheatActivity.this, "It is bad to cheat", Toast.LENGTH_SHORT).show();
         if (mAnswer) {
             mAnswerTextView.setText(R.string.true_button);
         } else {

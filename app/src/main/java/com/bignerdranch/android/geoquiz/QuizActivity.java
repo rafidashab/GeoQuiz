@@ -16,11 +16,13 @@ public class QuizActivity extends AppCompatActivity {
     private Button mFalseButton;
     private Button mNextButton;
     private Button mCheatButton;
+
     private TextView mQuestionTextView;
-    private boolean mIsCheater;
+
     private static final String TAG = "QuizActivity";
     private static final String KEY_INDEX = "index";
     private static final int REQUEST_CODE_CHEAT = 0;
+    private boolean mIsCheater;
 
     private Question[] mQuestionBank = new Question[] {
             new Question(R.string.question_australia, true),
@@ -141,6 +143,9 @@ public class QuizActivity extends AppCompatActivity {
         Toast.makeText(QuizActivity.this, messageId, Toast.LENGTH_SHORT).show();
     }
 
+    //RequestCode makes sure the result is from the right activity
+    //ResultCode makes sure the
+    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode != Activity.RESULT_OK) {
             return;
